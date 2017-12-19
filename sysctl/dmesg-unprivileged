@@ -1,0 +1,2 @@
+# Allow ordinary users to access dmesg
+sysctl kernel.dmesg_restrict=0

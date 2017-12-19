@@ -1,0 +1,46 @@
+" Vim base config
+
+syntax on
+set autoindent
+set smartindent
+set background=dark
+set mouse=a
+
+filetype plugin on
+filetype plugin indent on
+
+" Highlight trailing whitespace
+au Syntax *
+	\ syn match ExtraSpace "\s\+$" containedin=ALL
+	\ | hi def link ExtraSpace Error
+
+syn match ExtraSpace "\s\+$"
+hi def link ExtraSpace Error
+
+" complete hack to avoid # being unindented
+inoremap # X<BS>#
+
+map <F9> :NERDTreeToggle<CR>
+map <F12> :w <CR> :!make<CR>
+
+" allow faster typing
+command W :w
+command Q :q
+command Wq :wq
+command WQ :wq
+
+" :help restore-cursor
+autocmd BufReadPost *
+	\ if line("'\"") > 1 && line("'\"") <= line("$") |
+	\   exe "normal! g`\"" |
+	\ endif
+
+" :help fo-table;
+" o: continue the comment in the current line when opening a line
+" r: Automatically insert the current comment leader after hitting <Enter> in
+"    Insert mode.
+set formatoptions-=o
+set formatoptions+=rj
+
+" Don't use any of those fancy color modes. Use 8 colors plus bold.
+set t_Co=8

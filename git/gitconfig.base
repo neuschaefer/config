@@ -1,0 +1,19 @@
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	st = status
+	rem = remote
+	graph = log --graph --pretty=oneline --abbrev-commit
+	find = ls-files
+	dif = diff
+	f = fetch
+	fixes = log --pretty=fixes -n1
+	pretty = log --pretty=pretty -n1
+[color]
+	ui = true
+[transfer]
+	fsckobjects = true
+[pretty]
+	fixes = Fixes: %h (\"%s\")
+	pretty = %h (\"%s\")

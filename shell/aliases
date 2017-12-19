@@ -1,0 +1,9 @@
+# A few useful aliases and functions
+alias agp='ag --pager="less -r"'
+alias gdb='gdb -q'
+
+treel() { tree -C "$@" | less -r; }
+hdiff() {
+	[ $# -eq 2 ] || (echo "usage: hdiff file1 file2" 1>&2; exit 1)
+	diff -u <(hd "$1") <(hd "$2")
+}
