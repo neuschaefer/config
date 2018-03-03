@@ -1,0 +1,2 @@
+# Nicer core dump file names
+sysctl kernel.core_pattern=core-%e-%p
