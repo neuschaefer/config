@@ -44,3 +44,5 @@ set formatoptions+=rj
 
 " Don't use any of those fancy color modes. Use 8 colors plus bold.
 set t_Co=8
+
+set listchars=tab:>-
