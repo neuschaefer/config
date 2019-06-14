@@ -5,6 +5,7 @@ set autoindent
 set smartindent
 set background=dark
 set mouse=a
+set nomodeline
 
 filetype plugin on
 filetype plugin indent on
