@@ -1,6 +1,7 @@
 # A few useful aliases and functions
 alias agp='ag --pager="less -r"'
 alias gdb='gdb -q'
+alias yay='(echo;echo -e "\t\t\t\t\e[1;32my a y !\e[0m"; echo)'
 
 treel() { tree -C "$@" | less -r; }
 hdiff() {
